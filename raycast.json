@@ -1,7 +1,7 @@
 {
   "name": "reboot-raycast",
   "title": "Reboot Raycast",
-  "description": "Quickly reboot Raycast cleanly with a toast notification.",
+  "description": "Reboot Raycast by quitting and restarting",
   "author": "Arth Shah",
   "commands": [
     {

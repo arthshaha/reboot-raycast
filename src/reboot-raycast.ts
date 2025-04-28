@@ -6,13 +6,20 @@ export default async function main() {
   await showToast({ style: Toast.Style.Animated, title: "Restarting Raycast..." });
 
   // Use spawn to create a detached child process that survives Raycast quitting
-  const subprocess = spawn("/bin/bash", ["-c", `
-    sleep 10;
+  const subprocess = spawn(
+    "/bin/bash",
+    [
+      "-c",
+      `
+    sleep .5;
     open -a "Raycast"
-  `], {
-    detached: true,
-    stdio: "ignore",
-  });
+  `,
+    ],
+    {
+      detached: true,
+      stdio: "ignore",
+    },
+  );
 
   subprocess.unref(); // Detach from Raycast
 
